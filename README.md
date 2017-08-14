@@ -1,55 +1,56 @@
-# CS-1222 Introduction to Database
+# Introduction to Database
 
 Welcome to the introduction to database course!
 
-We will be learning some basic terms and concepts of relational database and the
-non-relational database like NoSQL databases.
+We will start the course by learning what is *Relational Database* and dive into
+the detail of concrete database like MySQL.
 
-You will be learning syntax of SQL and being able to design tables yourself and
-transition this knowledge to NoSQL databases.
+Later on in the course, we will, then, go over the advance yet central topic of
+*Relational Database* -- Joins. Of course, with a lot of examples to practice
+JOINs.
 
-After taking this course, you will be able to read/write SQL code to
+After we are done with *Relational Database*, we will go over the NoSQL database
+such as MongoDB to get a hands on difference between Relational Database and
+NoSQL database.
+
+All in all after the class, you should be able to read/write code to
 read/store/manipulate data into database.
 
 ## Prerequisites
 
 As this course is 100 level courses, I do not expect any of you to have any
-programming background. Thus, the course will assume you know nothing and teach
-everything from ground up.
+programming background before hands. Thus, the course will assume you know
+nothing and teach everything from ground up.
 
-Although it is not required but please be familiar with terminal(Command line
+Although it is not required but please be familiar with terminal (Command line
 interface on windows). Most of the examples within lectures will be in terminal.
 
 > While some may be in the MySQL workbench, I'd prefer to do everything in terminal
 
 I do recommend you to have a programming text-editor ready like
-[Sublime Text][2] or [Atom][3] installed on your computer so you can code.
+[Sublime Text][2], [Atom][3] or [Visual Studio Code][4] installed on your
+computer so you can code well.
 
 ## Announcements
 
 Please check out this Github repository often as I'll post all updates here.
 
 | Date | Announcements |
-| :------------- | :------------- |
-| August 28 | Added MySQL server set up at introduction.md and couple links in Quick links below |
-| September 3 | Added laboratory notes |
-| September 10 | Adjusted schedule |
-| October 1 | Homework2 due date extends to October 8th |
-| October 8 | Homework2 due date extends to October 15th |
-
+| :-- | :-- |
 
 ## Quick links
 
+* [Syllabus](SYLLABUS.md)
 * [SQL setup notes](https://github.com/csula/Utilities/blob/master/setups/mysql.md)
 * [SQL Venn Diagram from Coding Horror](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
 * [SQL comma join vs inner join performance](https://www.percona.com/blog/2010/04/14/is-there-a-performance-difference-between-join-and-where/)
 * [SQL from Tutorial Points](http://www.tutorialspoint.com/sql/)
 * [SQL Cheatsheet](http://zeroturnaround.com/rebellabs/sql-cheat-sheet/)
 * [Beginner guide to SQL](http://www.sohamkamani.com/blog/2016/07/07/a-beginners-guide-to-sql/)
-* [Syllabus](SYLLABUS.md)
 * [General Lab instructions](labs/README.md)
 * [Reference text book - SQL Essentials](https://www.amazon.com/SQL-Essentials-CDROM-Gary-Randolph/dp/1590280296)
-* Course chatroom here -- https://csula-cs1222-fall-16.slack.com
+* Course chatroom here
 
 [2]: https://www.sublimetext.com/
 [3]: https://atom.io/
+[4]: https://code.visualstudio.com/
