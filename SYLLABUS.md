@@ -79,22 +79,22 @@ The schedule below is tentative and is subject to change.
 
 | Week # [date]      | Topic     | Notes |
 | ------------------ | --- | --- |
-| 1  [08/27]         | [Introduction][1] | Set up environment |
-| 2  [09/03]         | [SQL Syntax][2] |  |
-| 3  [09/10]         | [Aggregation & Sub-queries][3] | Lab 1 |
-| 4  [09/17]         | [SQL Joins][4] | Homework 1 |
-| 5  [09/24]         | [SQL Functions][5] | Lab 2 |
-| 6  [10/01]         | [Advanced Queries][7] | |
-| 7  [10/08]         | [Data Manipulation][8] | Lab 3 |
-| 8  [10/15]         | [Mid term][6] | Homework 2 |
-| 9  [10/22]         | [Data definition language][9] | No class |
-| 10 [10/29]         | [Data definition language][9] |  |
-| 11 [11/05]         | [Advance Topic in SQL][15] | Lab 4 |
-| 12 [11/12]         | [Introduction to NoSQL][10] |  |
-| 13 [11/19]         | [MongoDB Aggregation][13] | Homework 3 |
-| 14 [11/26]         | Thanks Giving holiday | No class |
-| 15 [12/03]         | [Database Summary][12] | Homework 4 |
-| Final [12/10]      | [Final][16] |  |
+| 1  [08/26]         | [Introduction][1] | Set up environment |
+| 2  [09/02]         | [SQL Syntax][2] |  |
+| 3  [09/09]         | [Aggregation & Sub-queries][3] | [Lab 1][24] |
+| 4  [09/16]         | [SQL Joins][4] | [Homework 1][17] |
+| 5  [09/23]         | [SQL Functions][5] | [Lab 2][25] |
+| 6  [09/30]         | [Advanced Queries][7] | |
+| 7  [10/07]         | [Data Manipulation][8] | [Lab 3][26] |
+| 8  [10/14]         | [Mid term][6] | [Homework 2][18] |
+| 9  [10/21]         | [Data definition language][9] | No class |
+| 10 [10/28]         | [Data definition language][9] |  |
+| 11 [11/04]         | [Advance Topic in SQL][15] | [Lab 4][27] |
+| 12 [11/11]         | [Introduction to NoSQL][10] |  |
+| 13 [11/18]         | [MongoDB Aggregation][13] | [Homework 3][19] |
+| 14 [11/25]         | Thanks Giving holiday | No class |
+| 15 [12/02]         | [Database Summary][12] | [Homework 4][20] |
+| Final [12/09]      | [Final][16] |  |
 
 [1]: notes/introduction.md
 [2]: notes/sql-syntax.md
@@ -111,3 +111,14 @@ The schedule below is tentative and is subject to change.
 [14]: notes/final/md
 [15]: notes/sql-optional.md
 [16]: notes/final.md
+[17]: notes/homeworks/homework1.md
+[18]: notes/homeworks/homework2.md
+[19]: notes/homeworks/homework3.md
+[20]: notes/homeworks/homework4.md
+[21]: notes/labs/exercise1.md
+[22]: notes/labs/exercise2.md
+[23]: notes/labs/exercise3.md
+[24]: notes/labs/lab1.md
+[25]: notes/labs/lab2.md
+[26]: notes/labs/lab3.md
+[27]: notes/labs/lab4.md
