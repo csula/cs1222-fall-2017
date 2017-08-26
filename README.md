@@ -42,6 +42,10 @@ Please check out this Github repository often as I'll post all updates here.
 
 * [Syllabus](SYLLABUS.md)
 * [SQL setup notes](https://github.com/csula/Utilities/blob/master/setups/mysql.md)
+* [Course chatroom](https://csula-cs1222-fall2017.slack.com)
+
+### Recommended readings
+
 * [SQL Venn Diagram from Coding Horror](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
 * [SQL comma join vs inner join performance](https://www.percona.com/blog/2010/04/14/is-there-a-performance-difference-between-join-and-where/)
 * [SQL from Tutorial Points](http://www.tutorialspoint.com/sql/)
@@ -49,7 +53,6 @@ Please check out this Github repository often as I'll post all updates here.
 * [Beginner guide to SQL](http://www.sohamkamani.com/blog/2016/07/07/a-beginners-guide-to-sql/)
 * [General Lab instructions](labs/README.md)
 * [Reference text book - SQL Essentials](https://www.amazon.com/SQL-Essentials-CDROM-Gary-Randolph/dp/1590280296)
-* Course chatroom here
 
 [2]: https://www.sublimetext.com/
 [3]: https://atom.io/
