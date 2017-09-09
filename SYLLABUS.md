@@ -87,7 +87,7 @@ The schedule below is tentative and is subject to change.
 | 6  [09/30]         | [Advanced Queries][7] | |
 | 7  [10/07]         | [Data Manipulation][8] | [Lab 3][26] |
 | 8  [10/14]         | [Mid term][6] | [Homework 2][18] |
-| 9  [10/21]         | [Data definition language][9] | No class |
+| 9  [10/21]         | [Data definition language][9] |  |
 | 10 [10/28]         | [Data definition language][9] |  |
 | 11 [11/04]         | [Advance Topic in SQL][15] | [Lab 4][27] |
 | 12 [11/11]         | [Introduction to NoSQL][10] |  |
