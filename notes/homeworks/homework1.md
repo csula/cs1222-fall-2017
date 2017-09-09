@@ -30,3 +30,5 @@ Study the Books database and create the following queries. (Note: you need to ru
     5. For each book type, list the book type and the average number of pages in the books with price greater than $10 in each category, excluding the types where the average number of pages is less than 200. Sort the results by the average number of pages.
 
 Good luck!
+
+> You can use http://104.131.155.18:8000/homework-1 to test if your homework 1 is all correct.

@@ -19,6 +19,8 @@ Due at the end of class, please raise your hand when you are finished and we can
 16. Report region and the number of members in each region in the members table. Sort the results by the region.
 23. For any region that has more than one member with an e-mail address, list the region and the number of members with an e-mail address.
 
+> You can use this link to test if your SQL statements are correct: http://104.131.155.18:8000/lab-1_1
+
 ## Section 9 and 10 (4:30 to 8:30 section)
 
 1. List the first name, last name, and region of all members from Virginia who either have a work phone or an email address.
@@ -31,3 +33,5 @@ Due at the end of class, please raise your hand when you are finished and we can
 19. For each kind of LeadSource, report the number of artists who came in to the system through that lead source, the earliest EntryDate, and the most recent EntryDate.
 20. Report the titleid, average, shortest and longest track length in minutes of all tracks for each titleid with average length greater than 300. Use proper column alias.
 22. Report the TitleID and number of tracks for any TitleID with fewer than nine tracks.
+
+> You can use this link to test if your SQL statements are correct: http://104.131.155.18:8000/lab-1_2
