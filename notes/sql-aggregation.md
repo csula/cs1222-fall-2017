@@ -1,11 +1,11 @@
 # Aggregations and Sub-queries
 
 We can use aggregations for better data reporting like summarizing data into
-aggregated calculation.
+few numbers (e.g. counting how many records in table). And we can do query
+against our own query (queryception!) for advance report!
 
-And we can do query against our own query (sub-query!).
-
-Moreover, we will also be learning `JOIN` to deal with more than one table.
+Moreover, we will also be learning `JOIN` to deal with not just one but more
+than one table.
 
 ## Objectives
 
@@ -297,7 +297,8 @@ TitleID     AvgLength
 
 SELECT TitleID, AVG(LengthSeconds) AS AvgLength
 FROM Tracks
-WHERE LengthSeconds > 240;
+WHERE LengthSeconds > 240
+GROUP BY TitleID;
 
 /*
 TitleID     AvgLength   
