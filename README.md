@@ -46,6 +46,7 @@ Please check out this Github repository often as I'll post all updates here.
 
 ### Recommended readings
 
+* [MySQL Execution Order](https://stackoverflow.com/a/24128128)
 * [SQL Venn Diagram from Coding Horror](https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/)
 * [SQL comma join vs inner join performance](https://www.percona.com/blog/2010/04/14/is-there-a-performance-difference-between-join-and-where/)
 * [SQL from Tutorial Points](http://www.tutorialspoint.com/sql/)
