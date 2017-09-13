@@ -24,7 +24,7 @@ Study the Books database and create the following queries. (Note: you need to ru
 4. Aggregation & Joins
     1. List the number of books, the minimum price, maximum price and the average sales of history books.
         * The format of output is: `Number Min Price Max Price Average Sale`
-    2. List the number of books and the average number of pages published by pub_id 01.
+    2. List the number of books and the average number of pages published by pub_id P01.
     3. List the number of books and the total sales of the books with price greater than $15.
     4. For each book type, list the the number of books and the average price. Sort the results by the number of books.
     5. For each book type, list the book type and the average number of pages in the books with price greater than $10 in each category, excluding the types where the average number of pages is less than 200. Sort the results by the average number of pages.
