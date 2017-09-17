@@ -20,3 +20,5 @@
 5. List the names of all artists who have recorded more than one titles and the number of titles they have.   
 6. Report the name of the title and number of tracks for any title with fewer than 9 tracks.
  
+
+> SQL Unit Test link: http://104.131.155.18:8000/exercise-2
