@@ -1,6 +1,6 @@
 # Homework 3
 
-Due at 11/19 midnight.
+Due at 11/18 midnight.
 
 Reminder:
 

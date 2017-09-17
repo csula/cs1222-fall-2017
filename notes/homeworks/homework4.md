@@ -1,6 +1,6 @@
 # Homework 4
 
-Due at 12/03 midnight.
+Due at 12/02 midnight.
 
 Reminder:
 
