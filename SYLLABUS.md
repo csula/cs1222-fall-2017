@@ -83,7 +83,7 @@ The schedule below is tentative and is subject to change.
 | 2  [09/02]         | [SQL Syntax][2] |  |
 | 3  [09/09]         | [Aggregation & Sub-queries][3] | [Lab 1][24] |
 | 4  [09/16]         | [SQL Joins][4] | [Homework 1][17] |
-| 5  [09/23]         | [SQL Functions][5] |  |
+| 5  [09/23]         | [SQL Joins][4], [SQL Functions][5] |  |
 | 6  [09/30]         | [Advanced Queries][7] | [Lab 2][25] |
 | 7  [10/07]         | [Data Manipulation][8] | [Lab 3][26] |
 | 8  [10/14]         | [Mid term][6] | [Homework 2][18] |
