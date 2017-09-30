@@ -19,9 +19,11 @@ Due at the end of class, please raise your hand when you are finished and we can
 8. Report all the genres from the Genre table. Capitalize the first letter of each and the rest of the letters should be lower case.
 6. List every genre from the Genre table and the names of any titles in that genre if any. For any genres without titles, display 'No Titles' in the Title column.
 
+http://104.131.155.18:8000/lab-2_1
+
 ## Section 9 and 10 (4:30 to 8:30 section)
 
-2. Report the names of all artists that came from e-mail that have not recorded a title. Use JOIN to answer this question.
+1. Report the names of all artists that came from e-mail that have not recorded a title. Use JOIN to answer this question.
 6. Each member is given his or her salesperson as a primary contact name and also the name of that salesperson's supervisor as a secondary contact name. Produce a list of member names and the primary and secondary contacts for each.
 8. List the names of members in the 'Highlander'.
 9. List each title from the Title table along with the name of the studio where it was recorded, the name of the artist, and the number of tracks on the title.
@@ -32,5 +34,5 @@ Due at the end of class, please raise your hand when you are finished and we can
 7. Redo Q6 using CASE.
 10. Report the artist name and the age in years of the responsible member for each artist at the time of that artist's entry date.
    
- 
+ http://104.131.155.18:8000/lab-2_2
  
