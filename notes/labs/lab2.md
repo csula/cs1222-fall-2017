@@ -33,6 +33,6 @@ http://104.131.155.18:8000/lab-2_1
 5. Report the longest track title.
 7. Redo Q6 using CASE.
 10. Report the artist name and the age in years of the responsible member for each artist at the time of that artist's entry date.
-   
- http://104.131.155.18:8000/lab-2_2
+
+http://104.131.155.18:8000/lab-2_2
  
