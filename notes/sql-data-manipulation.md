@@ -10,6 +10,26 @@
 * Learn how SQL Server rollback transactions on errors
 * Understand the concepts of concurrency, locking and deadlock
 
+## Quick note on the SQL mode
+
+Run the query like:
+
+```sql
+SELECT * FROM Artists GROUP BY ArtistName;
+
+SELECT TitleID, COUNT(*) FROM Tracks;
+```
+
+If any of the above works for you without throwing the syntax error, you are in
+trouble!
+
+Run the following command to fix it.
+
+```sql
+SET sql_mode = 'ONLY_FULL_GROUP_BY';
+```
+
+
 ## Front-end vs. back-end
 
 * Back-end
