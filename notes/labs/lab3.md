@@ -34,6 +34,7 @@ FROM            Artists. 
 9. Members Doug Finney and Terry Irving are forming a new artist to be called "Doug and Terry." Add this record to the Artists table, using ArtistID 13, the address information of Doug Finney, no web address, today's entry date, and no lead source. Don’t hand-code any data for insert that can be looked up from the Members table.
 10. Add the appropriate new records to the XrefArtistsMembers table for the artist "Doug and Terry" (see #4). Doug is the responsible party. Don’t hand-code any data for insert that can be looked up from the Members table.
 
+http://104.131.155.18:8000/lab-3_1
 
 ## Section 9 and 10 (4:30 to 8:30 section)
 
@@ -59,3 +60,6 @@ FROM            Artists. 
 8. Lyric Music has decided to set up a web page for every artist who doesn't have a web site. The web address will be www.lyricmusic.com/ followed by the artistID. Fill this in for every artist record that doesn't already have a web site.
 9. Delete all members who work for the artist 'Sonata' from Members2 table.
 10. The area code for Columbus, Ohio has been changed from 277 to 899. Update the homephone and workphone numbers of all members in Members2 table accordingly.
+
+
+http://104.131.155.18:8000/lab-3_2
