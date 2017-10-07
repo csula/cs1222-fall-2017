@@ -10,8 +10,8 @@ Due at the end of class, please raise your hand when you are finished, and we ca
 
 1. Report the number of female, male members and the total number.  Use proper column names.
 2. For each title id, report the number of sound files(Mp3 file and the realaud file).
-3. The following SQL statement uses an Intersect to list all cities and regions that have both members and artists:
-    ```
+3. The following SQL statement uses an Intersect to list all cities and regions that have both members and artists:  
+```
 SELECT         city, region
 FROM            Members
 INTERSECT
