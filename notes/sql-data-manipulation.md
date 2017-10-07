@@ -3,6 +3,7 @@
 ## Objectives
 
 * Learn the concepts of front-end and back-end as it relates to database applications
+* Recap of JOINs
 * Add rows to a table using INSERT
 * Delete rows from a table using DELETE
 * Edit data in existing rows using UPDATE
@@ -20,8 +21,8 @@ SELECT * FROM Artists GROUP BY ArtistName;
 SELECT TitleID, COUNT(*) FROM Tracks;
 ```
 
-If any of the above works for you without throwing the syntax error, you are in
-trouble!
+If any of the above queries works for you without throwing the syntax error, you
+are in trouble!
 
 Run the following command to fix it.
 
@@ -29,8 +30,7 @@ Run the following command to fix it.
 SET sql_mode = 'ONLY_FULL_GROUP_BY';
 ```
 
-
-## Front-end vs. back-end
+## Front-end vs. Back-end
 
 * Back-end
   * Host data
@@ -41,6 +41,27 @@ SET sql_mode = 'ONLY_FULL_GROUP_BY';
   * MySQL Workbench
   * MySQL CLI
   * Website
+
+## JOINs Recap
+
+There were some general confusions around the concept of JOINs. In this section,
+we will review over the concept of JOINs all over again.
+
+First off, there are a lot of resources online that you can use to learn SQL. By
+now, you should be able to understand what they are saying because we have learned
+majority of the SQL.
+
+In example, https://sqlbolt.com/ is a interactive SQL exercise that you can
+follow through for more practice questions.
+
+http://sql-joins.leopard.in.ua/ provides a really good visualization on Venn
+Diagram to SQL query.
+
+JOINs are usually explained through the classic Venn Diagram … See
+https://blog.codinghorror.com/a-visual-explanation-of-sql-joins/
+
+There are also other side of debate on using Venn Diagram to explain JOINs by
+https://blog.jooq.org/2016/07/05/say-no-to-venn-diagrams-when-explaining-joins/
 
 ## INSERT
 

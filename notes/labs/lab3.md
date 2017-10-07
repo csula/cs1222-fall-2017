@@ -17,7 +17,7 @@ FROM            Members
 INTERSECT
 SELECT         city, region
 FROM            Artists. 
-```
+    ```
 
     Unfortunately you cannot use Intersect in MySQL. Write a query that would run in the other databases, using a Join to accomplish the  same thing.
 
