@@ -20,6 +20,20 @@
 * With DDL you gain more control over exactly what database objects are built and what they are named
 * DDL saved into a script can be easily ported from one database installation to another
 
+## Scripts
+
+* Set of SQL commands saved in a text file
+    * Duplicate database structure on another server or at another time
+    * Test commands on a development server and them run on a production server
+
+## Using Scripts with MySQL
+
+* MySQL can run script st a command prompt
+    * Run by `mysql database_name < path_and_script_name*`
+* Script can also be imported in MySQL workbench as below:
+    * http://recordit.co/dHS4kCbl97
+* Or as simple as just copy and paste the whole script content and execute them
+
 ## Naming tips
 
 * Using consistent names
@@ -38,6 +52,25 @@
 * New MySQL database can be created with Create Database followed by the name to be used for the new database or Create Database If Not Exists followed by the name of the database
 * There are no other options for the Create Database command
 * Can switch between databases by typing USE keyword followed by the database name
+
+Overall hierarchy:
+
+```
+Database > Table > Column > Record
+
++---Database-------------------------------+
+|                                          |
+|  +--Table-----------------------+        |
+|  | Column | Column | Column     |+       |
+|  +------------------------------+|+      |
+|  | Vale   | Value  | Value      |||      |
+|  | Vale   | Value  | Value      |||      |
+|  | Vale   | Value  | Value      |||      |
+|  +------------------------------+||      |
+|   +------------------------------+|      |
+|    +------------------------------+      |
++------------------------------------------+
+```
 
 ## Create a Table
 
@@ -503,14 +536,3 @@ DROP VIEW vwArtistWebs;
     * Allows database programmers rather than application programmers to control and monitor complex data relationships
     * Can simplify data migration
     * Back-end programming generally runs faster than front-end programming
-
-## Scripts
-
-* Set of SQL commands saved in a text file
-    * Duplicate database structure on another server or at another time
-    * Test commands on a development server and them run on a production server
-
-## Using Scripts with MySQL
-
-* MySQL can run script st a command prompt
-    * Run by `mysql database_name < path_and_script_name*`
