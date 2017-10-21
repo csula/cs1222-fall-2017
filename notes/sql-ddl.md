@@ -17,7 +17,7 @@
 
 * Subset of SQL commands to create and modify database objects
 * Can create an entire database using SQL rather than a graphical user interface
-* With DDL you gain more control over exactly what database obejcts are built and what they are named
+* With DDL you gain more control over exactly what database objects are built and what they are named
 * DDL saved into a script can be easily ported from one database installation to another
 
 ## Naming tips
@@ -30,6 +30,9 @@
 * Name primary key and foreign key fields consistently
 * Avoid generic field names, such as ID or Date
 
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.</p>&mdash; Jeff Atwood (@codinghorror) <a href="https://twitter.com/codinghorror/status/506010907021828096?ref_src=twsrc%5Etfw">August 31, 2014</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 ## Databases
 
 * Instance of MySQL running on a server computer can contain multiple databases
@@ -41,7 +44,7 @@
 
 Syntax:
 
-```sql
+```mysql
 CREATE TABLE {tableName} (
     {fieldName} datatype null | not null,
     {fieldName} datatype null | not null
@@ -50,7 +53,7 @@ CREATE TABLE {tableName} (
 
 Example:
 
-```sql
+```mysql
 # Create table called contracts with the ArtistID from the Artists table and a ContractDate field
 CREATE TABLE Contracts (
     ArtistID Integer NOT NULL,
@@ -62,13 +65,13 @@ CREATE TABLE Contracts (
 
 Syntax:
 
-```sql
+```mysql
 DROP TABLE {tableName};
 ```
 
 Example:
 
-```sql
+```mysql
 # Remove the Contracts table from the database
 DROP TABLE Contracts;
 ```
@@ -77,14 +80,14 @@ DROP TABLE Contracts;
 
 Syntax:
 
-```sql
+```mysql
 ALTER TABLE {tableName}
 ADD {columnName} {dataType} {null | not null};
 ```
 
 Example:
 
-```sql
+```mysql
 # Add a text field called contract type with a length of 10 to the Contracts table
 ALTER TABLE Contracts
 ADD ContractType VarChar(10) NULL;
@@ -94,14 +97,14 @@ ADD ContractType VarChar(10) NULL;
 
 Syntax:
 
-```sql
+```mysql
 ALTER TABLE {tableName}
 MODIFY COLUMN {columnName} {dataType} {null | not null};
 ```
 
 Example:
 
-```sql
+```mysql
 # Change the length on the ContractType field to 15 in the Contracts Table
 ALTER TABLE Contracts 
 MODIFY ContractType VarChar(15);
@@ -111,14 +114,14 @@ MODIFY ContractType VarChar(15);
 
 Syntax:
 
-```sql
+```mysql
 ALTER TABLE {tableName}
 DROP COLUMN {columnName};
 ```
 
 Example:
 
-```sql
+```mysql
 # Remove the ContractType column from Contracts table
 ALTER TABLE Contracts
 DROP COLUMN ContractType;
@@ -132,7 +135,7 @@ DROP COLUMN ContractType;
 
 ## Defining as Identify Column
 
-```sql
+```mysql
 CREATE TABLE tbl (
     ID int AUTO_INCREMENT NOT NULL,
     anotherField int null,
@@ -140,7 +143,7 @@ CREATE TABLE tbl (
 );
 ```
 
-## Identity vs guid columns
+## Identity vs GUID columns
 
 * An identity column (or sequence) is unique within a given a table in a given database on a given server
 * With distributed database, identity column may not\be unique across every instance of the table
@@ -152,6 +155,7 @@ CREATE TABLE tbl (
 ## Constraints
 
 * A constraint is any kind of *restriction* that is placed on the data that is inserted into a table
+    * The purpose of constraints is to ensure data integrity
 * **Entity constraints** ensure the value in a column meets some criteria compared to other rows in the table
     * Primary key
     * Unique
@@ -168,7 +172,7 @@ CREATE TABLE tbl (
     * (pk for primary key, fk for foreign key, df for default, ck for check, and un for unique)
 * Follow that with the table name
 * If it is a check, default, or unique constraint, follow the table name with the column being constrained
-* If it is a foreign key contraint, follow the table name with the name of the table it refers to.
+* If it is a foreign key constraint, follow the table name with the name of the table it refers to.
 
 ## Primary Key Constraint (with alter table)
 
@@ -176,14 +180,14 @@ CREATE TABLE tbl (
 
 Syntax:
 
-```sql
+```mysql
 ALTER TABLE {tableName}
 ADD CONSTRAINT {constraintName} PRIMARY KEY ({columnname}, {columnname});
 ```
 
 Example:
 
-```sql
+```mysql
 # Set the primary key of the Contracts table to ArtistID and ContractDate
 ALTER TABLE Contracts
 ADD CONSTRAINT pk_contracts PRIMARY KEY (ArtistID, ContractDate);
@@ -197,7 +201,7 @@ ADD CONSTRAINT pk_tbl PRIMARY KEY (ID);
 
 Syntax:
 
-```sql
+```mysql
 # Only allow one pk fields
 CREATE TABLE {tableName} (
     {column} datattype null | not null PRIMARY KEY
@@ -217,14 +221,14 @@ CREATE TABLE tableName (
 
 Syntax:
 
-```sql
+```mysql
 ALTER TABLE {tableName}
 ADD CONSTRAINT {constraintName} UNIQUE (column1, column2);
 ```
 
 Example:
 
-```sql
+```mysql
 # Add a constraint to the Ttiles table so taht UPC is unique
 ALTER TABLE Titles
 ADD CONSTRAINT un_title_upc UNIQUE (UPC);
@@ -238,7 +242,7 @@ ADD CONSTRAINT un_titles_artistid_title UNIQUE (ArtistID, Title);
 
 Syntax:
 
-```sql
+```mysql
 # create a single column unique constraint
 CREATE TABLE {tableName} (
     {column} datatype not null unique
@@ -263,7 +267,7 @@ CREATE TABLE {tableName} (
 
 Syntax:
 
-```sql
+```mysql
 ALTER TABLE {tableName}
 ALTER {column} SET DEFAULT {value};
 ```
@@ -272,7 +276,7 @@ ALTER {column} SET DEFAULT {value};
 
 Syntax:
 
-```sql
+```mysql
 CREATE TABLE {tableName} (
     {column2} datatype DEFAULT {value}
 );
@@ -280,7 +284,7 @@ CREATE TABLE {tableName} (
 
 Example:
 
-```sql
+```mysql
 CREATE TABLE tbl (
     ID int NOT NULL,
     anotehrColumn int DEFAULT 0 NOT NULL
@@ -298,7 +302,7 @@ CREATE TABLE tbl (
 
 ## Foreign Key Constraints
 
-* Foreign key constraint requires taht every CD_ID in Child table matches existing CD_ID in parent table
+* Foreign key constraint requires that every CD_ID in Child table matches existing CD_ID in parent table
 
 > Take Titles and Tracks table for example
 
@@ -306,7 +310,7 @@ CREATE TABLE tbl (
 
 Syntax:
 
-```sql
+```mysql
 ALTER TABLE child_tablename
 ADD CONSTRAINT constraintName FOREIGN KEY (child_column, child_column2) 
 REFERENCES parent_tablename (parent_column, parent_column2);
@@ -314,7 +318,7 @@ REFERENCES parent_tablename (parent_column, parent_column2);
 
 Example:
 
-```sql
+```mysql
 # Create a foreign key relationship to enforce that StudioID of the Titles table refers to StudioID of the Studios table
 ALTER TABLE Titles
 ADD CONSTRAINT fk_titles_studios FOREIGN KEY (StudioID)
@@ -330,7 +334,7 @@ REFERENCES SalesPeople (SalesID);
 
 Syntax:
 
-```sql
+```mysql
 CREATE TABLE tableName (
     column1 datatype not null,
     column2 datatype not null,
@@ -340,7 +344,7 @@ CREATE TABLE tableName (
 
 Example:
 
-```sql
+```mysql
 # Create a table called constracts with the ArtistID from the Artists table and a ContractDate field. Create a foreign key constraint between ArtistID and the ArtistID in the Artist table
 CREATE TABLE Contracts (
     ArtistID Integer NOT NULL,
@@ -352,7 +356,7 @@ CREATE TABLE Contracts (
 
 ## Foreign Key Implications
 
-* Foreign key contraints require that every PK field in child table matches existing FK in the parent table
+* Foreign key constraints require that every PK field in child table matches existing FK in the parent table
 * Constraint will not allow "orphan" records
     * Before insert new parent record before inserting related child records
     * Must delete child records before deleting related parent record
@@ -360,13 +364,13 @@ CREATE TABLE Contracts (
         * Drop constraint before updating either parent or child
         * Or use *CASCADE UPDATE*
 
-## Cascading udpates & deletes
+## Cascading update & deletes
 
-* Cascade udpate would change all references in child table when a PK is changed in parent table
+* Cascade update would change all references in child table when a PK is changed in parent table
 * Cascade delete would delete all related records in child table when a record is deleted in parent table
 * Avoid orphan records
 
-```sql
+```mysql
 CREATE TABLE Titles (
 	TitleID int ,
 	ArtistID int NOT NULL ,
@@ -388,13 +392,13 @@ ON DELETE CASCADE;
 
 ## Cascading updates & deletes
 
-* MySQL supports cacade deletes with the inclusion of on delete cascade at the end of the constraint clause
+* MySQL supports cascade deletes with the inclusion of on delete cascade at the end of the constraint clause
 
 ## Dropping Constraints
 
 Syntax:
 
-```sql
+```mysql
 ALTER TABLE tableName
 DROP PRIMARY KEY;
 
@@ -404,7 +408,7 @@ DROP CONSTRAINT constraintName;
 
 Example:
 
-```sql
+```mysql
 # Drop the fk_constracts_artist constaint on the Contracts table
 ALTER TABLE Contracts
 DROP FOREIGN KEY fk_contracts_artist;
@@ -414,7 +418,7 @@ DROP FOREIGN KEY fk_contracts_artist;
 
 * Used to speed up searches, sorts, and joins
 * Primary keys are by definition indexes
-* Other good index canditates
+* Other good index candidates
     * Foreign key columns
     * Non-foreign key columns used regularly to join tables
     * Columns regularly used in WHERE clauses
@@ -428,13 +432,13 @@ DROP FOREIGN KEY fk_contracts_artist;
 
 Syntax:
 
-```sql
+```mysql
 CREATE INDEX indexname ON TableName (column1, column2);
 ```
 
 Example:
 
-```sql
+```mysql
 # Create an index on SalesID column in Members
 CREATE INDEX ix_members_salesid ON Members(SalesID);
 ```
@@ -443,13 +447,13 @@ CREATE INDEX ix_members_salesid ON Members(SalesID);
 
 Syntax:
 
-```sql
+```mysql
 DROP INDEX indexName ON tableName;
 ```
 
 Example:
 
-```sql
+```mysql
 DROP INDEX ix_members_salesid ON Members;
 ```
 
@@ -479,7 +483,7 @@ FROM Artists WHERE WebAddress IS NOT NULL;
 
 ## Dropping a view
 
-Synatx:
+Syntax:
 
 ```sql
 DROP VIEW viewName;
