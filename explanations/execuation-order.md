@@ -1,4 +1,9 @@
-Execution order:
+# SQL Execution Plan
+
+The goal for this article is to explain the SQL behind the scene based on the
+execution plan order.
+
+## Execution order:
 
 * FROM clause
 * WHERE clause
@@ -6,7 +11,6 @@ Execution order:
 * GROUP BY clause
 * HAVING clause
 * ORDER BY clause
-
 
 SELECT Name, AVG(Grade)
 FROM Student_Grades
