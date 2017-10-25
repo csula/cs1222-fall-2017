@@ -3,15 +3,16 @@
 ## Objectives
 
 * Lean how databases are created
+* Save and use DDL in scripts
 * Create and alter the field structure of tables
 * Create and drop primary key constraints
 * Create and drop default constraints
 * Create and drop check constraints
 * Create and drop foreign key constraints
+* Field types
+* Prepare Statements
 * Create and drop indexes
 * Create and drop views
-* Learn about stored procedures and triggers
-* Save and use DDL in scripts
 
 ## Database Definition Language (DDL)
 
@@ -331,12 +332,12 @@ CREATE TABLE tbl (
     * Test against other columns
     * Cannot test against another table - need stored procedures
 * MySQL does not support check constraints
+    * In order to do `check` constraint, you will need to know how to use *triggers*
 
 ## Foreign Key Constraints
 
 * Foreign key constraint requires that every CD_ID in Child table matches existing CD_ID in parent table
-
-> Take Titles and Tracks table for example
+* Foreign key constraint requires the parent_column in parent_table to be primary key
 
 ## Foreign Key Constraints with alter table
 
@@ -355,11 +356,13 @@ Example:
 ALTER TABLE Titles
 ADD CONSTRAINT fk_titles_studios FOREIGN KEY (StudioID)
 REFERENCES Studios (StudioID);
+# Note that above may not work until you have added primary key StudioID in Studios table
 
 # Create a foreign key relationship between the Supervisor column of SalesPeople and SalesID column of SalesPeople such that Supervisor must be a valid SalesID
 ALTER TABLE SalesPeople 
 ADD CONSTRAINT fk_salespeople_salespeople FOREIGN KEY (Supervisor)
 REFERENCES SalesPeople (SalesID);
+# Note that above may not work until you have added primary key SalesID in Sales table
 ```
 
 ## Foreign key constraint
@@ -367,10 +370,11 @@ REFERENCES SalesPeople (SalesID);
 Syntax:
 
 ```mysql
-CREATE TABLE tableName (
-    column1 datatype not null,
-    column2 datatype not null,
-    constraint constraintName FOREIGN KEY (column1) REFERENCES parent_tablename (parent_column)
+CREATE TABLE { table_name } (
+    { column1 } { datatype },
+    { column2 } { datatype },
+    CONSTRAINT { constraintName } FOREIGN KEY ({ column1 })
+    REFERENCES { parent_tablename } ({ parent_column })
 );
 ```
 
@@ -445,6 +449,22 @@ Example:
 ALTER TABLE Contracts
 DROP FOREIGN KEY fk_contracts_artist;
 ```
+
+## Field Types
+
+* Number
+    * bit
+    * int
+    * float
+    * double
+* String
+    * varchar
+    * text
+    * enum
+* Date/time
+    * Date
+    * Datetime
+    * timestamp
 
 ## Indexes
 

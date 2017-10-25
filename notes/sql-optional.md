@@ -1,5 +1,13 @@
 # Advanced topic in SQL
 
+## Objectives
+
+* Triggers
+* Store Procedures
+* Data Modeling (UML, ER Diagram)
+
+## Database Experience
+
 > Rather, optional topic covered by be from my experience of working with database.
 
 When working with database, there are a couple thing you have to know.
@@ -8,7 +16,7 @@ This database is the single truth (usually) for your business. And usually busin
 
 To do so, you usually need to log such data but may not be within the same database table.
 
-You may have a audit data table!
+You may have a audit data table.
 
 ## Triggers
 
@@ -17,7 +25,7 @@ To create such table and maintain data you can use **Trigger**.
 To create a trigger you can follow the following syntax:
 
 ```sql
-CREATE TRIGGER `event_name` BEFORE|AFTER INSERT|UPDATE|DELETE 
+CREATE TRIGGER `event_name` {BEFORE|AFTER} {INSERT|UPDATE|DELETE}
 ON `table_name`
 FOR EACH ROW BEGIN
     -- trigger body
