@@ -55,6 +55,7 @@ Please check out this Github repository often as I'll post all updates here.
 * [General Lab instructions](labs/README.md)
 * [Reference text book - SQL Essentials](https://www.amazon.com/SQL-Essentials-CDROM-Gary-Randolph/dp/1590280296)
 * [Why SQL is beating NoSQL](https://blog.timescale.com/why-sql-beating-nosql-what-this-means-for-future-of-data-time-series-database-348b777b847a)
+* [SQL Tutorial](http://www.mysqltutorial.org/)
 
 [2]: https://www.sublimetext.com/
 [3]: https://atom.io/
