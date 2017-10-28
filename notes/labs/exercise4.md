@@ -1,4 +1,4 @@
-# Exercise 4
+# Exercise 3
 
 ## Story
 
@@ -51,3 +51,7 @@ have to create a new table to track play list to tracks relationship.
 10. Create a view called `PlayListGenres` that displays `PlayLists` and its Genre count containing fields of `PlayListID`, `Genre`, `Count`
     * hint, you will need to do Joins from `PlayList` all the way to `Genre`
     * hint: use `SELECT * FROM PlayListGenres` to test result
+
+Github page reference: https://github.com/csula/cs1222-fall-2017/blob/master/notes/labs/exercise4.md
+
+Use http://104.131.155.18:8000/exercise-3 for testing
