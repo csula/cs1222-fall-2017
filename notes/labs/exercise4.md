@@ -1,0 +1,40 @@
+# Exercise 4
+
+## Story
+
+We want to introduce a new *custom play list* feature for our customers where
+they can customize the tracks all together as any way they want. To do so, we will
+have to create a new table to track play list to tracks relationship.
+
+1. Create `PlayLists` table with fields of `PlayListID`(int), `PlayListName` (varchar(255)), `Description`(text)
+    * Primary ID should be on `PlayListID`
+    * None of the fields should be allowed to have null
+2. Create `PlayListSongs` table with fields of `PlayListID`, `TitleID`, `TrackNum`, `NumberOfPlays`(int), `SongOrder`(int)
+3. Add `PlayListID` as foreign key from `PlayListSongs` table to `PlayList` table
+4. Add `TitleID` and `TrackNum` as foreign key from `PlayListSongs` table to `Tracks` table
+    * hint: you may need to add primary key to Tracks table
+5. Insert sample records to `PlayLists` table like below:
+    
+    | PlayListID | PlayListName | Description |
+    | :-- | :-- | :-- |
+    | 1 | My Custom Play List | Description |
+    | 2 | Very second play list | Hello songs |
+6. Insert sample records to `PlayListSongs` table like below:
+    
+    | PlayListID | TitleID | TrackNum | NumberOfPlays | SongOrder |
+    | :-- | :-- | :-- | :-- | :-- |
+    | 1 | 1 | 1 | 9 | 1 |
+    | 1 | 3 | 2 | 2 | 4 |
+    | 1 | 3 | 5 | 5 | 3 |
+    | 1 | 5 | 3 | 1 | 2 |
+    | 1 | 5 | 9 | 99 | 5 |
+    | 2 | 6 | 1 | 500 | 4 |
+    | 2 | 6 | 2 | 201 | 3 |
+    | 2 | 6 | 3 | 999 | 1 |
+    | 2 | 1 | 4 | 42 | 2 |
+7. `Hottie` (TitleID 1 and TrackNum 1 in Tracks table) is being requested to be taken down. We have to delete this track from title id 1. Design the deletion query.
+    * hint: If you didn't set the `Cascading update & delete`, this is the time to go back to earlier table creation statement to do so
+8. We soon realized that int type for `NumberOfPlays` is too small for our scale. Design a query to update `NumberOfPlays` from int type to bigint type
+9. We no longer wants to support description field from `PlayLists` table. Design a query to delete `Description` field from `PlayLists` table
+10. Create a view called `PlayListGenres` that displays `PlayLists` and its Genre count containing fields of `PlayListID`, `Genre`, `Count`
+    * hint, you will need to do Joins from `PlayList` all the way to `Genre`
