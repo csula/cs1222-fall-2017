@@ -9,17 +9,26 @@ have to create a new table to track play list to tracks relationship.
 1. Create `PlayLists` table with fields of `PlayListID`(int), `PlayListName` (varchar(255)), `Description`(text)
     * Primary ID should be on `PlayListID`
     * None of the fields should be allowed to have null
+    * Use `DESCRIBE` to test result
 2. Create `PlayListSongs` table with fields of `PlayListID`, `TitleID`, `TrackNum`, `NumberOfPlays`(int), `SongOrder`(int)
+    * None of the fields should be allowed to have null
+    * Default for `NumberOfPlays` and `SongOrder` should be zero
+    * Use `DESCRIBE` to test result
 3. Add `PlayListID` as foreign key from `PlayListSongs` table to `PlayList` table
+    * Use `DESCRIBE` to test result
 4. Add `TitleID` and `TrackNum` as foreign key from `PlayListSongs` table to `Tracks` table
     * hint: you may need to add primary key to Tracks table
+    * hint: remember foreign key constraints -- data type has to be the same
+    * Use `DESCRIBE` to test result
 5. Insert sample records to `PlayLists` table like below:
+    * hint: use `SELECT * FROM PlayLists` to test result
     
     | PlayListID | PlayListName | Description |
     | :-- | :-- | :-- |
     | 1 | My Custom Play List | Description |
     | 2 | Very second play list | Hello songs |
 6. Insert sample records to `PlayListSongs` table like below:
+    * hint: use `SELECT * FROM PlayLists` to test result
     
     | PlayListID | TitleID | TrackNum | NumberOfPlays | SongOrder |
     | :-- | :-- | :-- | :-- | :-- |
@@ -34,7 +43,11 @@ have to create a new table to track play list to tracks relationship.
     | 2 | 1 | 4 | 42 | 2 |
 7. `Hottie` (TitleID 1 and TrackNum 1 in Tracks table) is being requested to be taken down. We have to delete this track from title id 1. Design the deletion query.
     * hint: If you didn't set the `Cascading update & delete`, this is the time to go back to earlier table creation statement to do so
+    * hint: use `SELECT * FROM PlayListSongs` to test result
 8. We soon realized that int type for `NumberOfPlays` is too small for our scale. Design a query to update `NumberOfPlays` from int type to bigint type
+    * hint: use `DESCRIBE` to test result
 9. We no longer wants to support description field from `PlayLists` table. Design a query to delete `Description` field from `PlayLists` table
+    * hint: use `DESCRIBE` to test result
 10. Create a view called `PlayListGenres` that displays `PlayLists` and its Genre count containing fields of `PlayListID`, `Genre`, `Count`
     * hint, you will need to do Joins from `PlayList` all the way to `Genre`
+    * hint: use `SELECT * FROM PlayListGenres` to test result
