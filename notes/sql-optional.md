@@ -2,8 +2,9 @@
 
 ## Objectives
 
-* Triggers
+* Prepared statements
 * Store Procedures
+* Triggers
 * Data Modeling (UML, ER Diagram)
 
 ## Database Experience
@@ -11,12 +12,166 @@
 > Rather, optional topic covered by be from my experience of working with database.
 
 When working with database, there are a couple thing you have to know.
-
 This database is the single truth (usually) for your business. And usually business wants more data like when did users login, when did users do transactions the most often.
-
 To do so, you usually need to log such data but may not be within the same database table.
-
 You may have a audit data table.
+
+## Prepared Statements
+
+Prepared statements is used to create queries that contains placeholder that can
+be replaced with variables `?`.
+
+In example:
+
+```sql
+SELECT *
+FROM Artists
+WHERE ArtistID = ?;
+```
+
+Where `?` can be used to replace as any value you plug in later as following
+example:
+
+```mysql
+# Start by creating preapred statement
+PREPARE stmt FROM 'SELECT *
+                   FROM Artists
+                   WHERE ArtistID = ?';
+
+# In MySQL you can use following syntax to create variable
+SET @aid = '1';
+
+# Execute statement with variable
+EXECUTE stmt USING @aid;
+
+DEALLOCATE PREPARE stmt;
+```
+
+## Store Procedures
+
+Store Procedures allows SQL developers to define function like "procedure" that
+can contains some application specific logics inside to allow code reusability
+and utilize the database server to do more.
+
+### Defining procedure
+
+In specific, following example creates a GetAllArtists procedure.
+
+```mysql
+# We start by defining the delimiter so that the SQL command doesn't end with ";"
+DELIMITER //
+CREATE PROCEDURE GetAllArtists()
+  BEGIN
+  SELECT * FROM Artists;
+  END //
+DELIMITER ;
+```
+
+### Debugging procedure
+
+After we have defined the store procedure, we can then use the following command
+to find out all procedures in the database.
+
+```mysql
+SHOW PROCEDURE STATUS WHERE db = 'lyric';
+```
+
+And if you want to find out the detail of store procedure, you can do following:
+
+```mysql
+SHOW CREATE PROCEDURE GetAllArtists;
+```
+
+### Variables
+
+Of course that the store procedure doesn't only allow SQL developers to define
+a reusable SQL query. In additional to defining the procedure that runs an 
+arbitrary query, it also gives the ability to define variables like:
+
+```mysql
+# Syntax to create new variable
+DECLARE variable_name datatype(size) DEFAULT default_value;
+
+# Example of createing varialbe and plug SQL result in
+DECLARE total_products INT DEFAULT 0;
+
+SELECT COUNT(*) INTO total_products
+FROM products
+```
+
+### Procedure parameter modes
+
+In parameter, we have three modes (`IN`, `OUT` and `INOUT`). We will see how to use
+mode in few examples below.
+
+#### IN
+
+To use the variable as `IN` mode example as above, you can follow this example:
+
+```mysql
+DELIMITER //
+CREATE PROCEDURE GetArtistsByCity(IN cityName VARCHAR(25))
+ BEGIN
+ SELECT *
+ FROM Artists
+ WHERE city = cityName;
+ END //
+DELIMITER ;
+```
+
+Then you can call procedure above like:
+
+```mysql
+CALL GetArtistsByCity('London');
+CALL GetArtistsByCity('Alverez');
+```
+
+#### OUT
+
+Out is used when we want to get specific result out from Query not just getting table
+
+```mysql
+DELIMITER $$
+CREATE PROCEDURE CountArtistsByCity(
+ IN cityName VARCHAR(25),
+ OUT total INT)
+BEGIN
+ SELECT count(*)
+ INTO total
+ FROM Artists
+ WHERE city = cityName;
+END$$
+DELIMITER ;
+```
+
+Then you can get result by calling procedure and select from result value:
+
+```mysql
+CALL CountArtistsByCity('London', @total);
+SELECT @total;
+```
+
+#### INOUT
+
+`INOUT` mode allows SQL to define mutable variables so that variables can be given
+to procedure and mutated in the procedure and get updated values outside of it.
+
+```mysql
+DELIMITER $$
+CREATE PROCEDURE set_counter(INOUT count INT(4),IN inc INT(4))
+BEGIN
+ SET count = count + inc;
+END$$
+DELIMITER ;
+```
+
+```mysql
+SET @counter = 1;
+CALL set_counter(@counter,1); -- 2
+CALL set_counter(@counter,1); -- 3
+CALL set_counter(@counter,5); -- 8
+SELECT @counter; -- 8
+```
 
 ## Triggers
 
