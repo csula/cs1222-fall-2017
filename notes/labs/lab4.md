@@ -96,7 +96,7 @@ Once we created the trasaction table, we also want to create a webaddress for th
         ```
 8. Add unique constraint to `WebAddress` in `WebTitleSales` table
     * Use `DESCRIBE` to test result
-9. TitleID 3 is now also being requested to take down. You have to remove TitleID 3 from Titles table.
+9. TitleID 5 is now also being requested to take down. You have to remove TitleID 5 from Titles table.
     * Hint: remember we setup foreign keys from the `TitleSales` table, if you have to do anything in any other table other than Titles table. Please list them as well.
     * Use `SELECT * FROM WebTitleSales` to test result
 10. Create a view called `TitleTotalSales` containing TitleID, Sales, SalesType (being either personal or web), Identifier (either SalesID or WebAddress).
