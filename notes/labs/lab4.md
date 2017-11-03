@@ -66,7 +66,7 @@ Once we created the trasaction table, we also want to create a webaddress for th
 2. Change `TitleSales` table from question 1 to have foreign key of SalesID to SalesPeople table and foreign key of TitleID Titles table
     * Use `DESCRIBE` to test result
 3. Add index to `TitleID` and `SalesID` to `TitleSales` table
-    * Use `DESCRIBE` to test result
+    * Use `SHOW INDEX FROM TitleSales` to test result
 4. Add a random sale values to `TitleSales` table of `TitleID 1 and SalesID 2` and `TitleID 3 and SalesID 3`
     * Hint: You can use `Rand(int)` function to get random value
         * Usually, we can simply use `rand` function as it is, for the testing purpose, please give a seed value to rand function as their SalesID id
@@ -84,6 +84,8 @@ Once we created the trasaction table, we also want to create a webaddress for th
     * Use `DESCRIBE` to test result
 7. For every title in Titles, add them to `WebTitleSales` table with same TitleID, random sales, and WebAddress being www.{title (`replace` spaces with "_" (underline))}.lyrics.com
     * Hint: you can replace by replace function -- http://dev.mysql.com/doc/refman/5.7/en/string-functions.html#function_replace
+    * Hint: You can use `Rand(int)` function to get random value
+        * Usually, we can simply use `rand` function as it is, for the testing purpose, please give a seed value to rand function as their TitleID
     * Use `SELECT` to test result
     * Your table should look something like below:
 
