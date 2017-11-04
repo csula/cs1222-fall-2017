@@ -46,7 +46,7 @@ In addition, we also want to allow artist to create multiple personal pages. Cur
 9. Artist id 5 decide to be a developer and decide to remove himself/herself out of Artists table. Delete Artist id 5 from artists table
     * Hint: remember we still have the foreign keys set up from earlier table, if you have to do anything in the table, please list them as well
     * Use `SELECT * FROM ArtistPages` to test result
-10. Create a view called `ArtistNamePages` containing ArtistID, ArtistName, Country and WebAddress from `ArtistPages` table
+10. Create a view called `ArtistNamePages` containing ArtistID, ArtistName, Country and WebAddress from `Artists` table
     * USE `SELECT` to test result
 
 http://104.131.155.18:8000/lab-4_1
