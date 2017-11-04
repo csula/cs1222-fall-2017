@@ -49,6 +49,8 @@ In addition, we also want to allow artist to create multiple personal pages. Cur
 10. Create a view called `ArtistNamePages` containing ArtistID, ArtistName, Country and WebAddress from `ArtistPages` table
     * USE `SELECT` to test result
 
+http://104.131.155.18:8000/lab-4_1
+
 ## Evening Section (16:30 - 20:30)
 
 Story:
@@ -107,3 +109,6 @@ Once we created the trasaction table, we also want to create a webaddress for th
         TitleID | Sales    | SalesType | Identifier
         1       | 0.645212 | web       | www.Meet_the_Neurotics.lyrics.com
         ```
+
+
+http://104.131.155.18:8000/lab-4_2
