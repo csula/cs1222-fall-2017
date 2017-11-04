@@ -288,13 +288,13 @@ From here, you want to think about the database queries (e.g. what queries you m
 
 Lets say in gradesheet project, we will be calling this grade table a lot to get student grade because this student grade is showing up on the homepage of the student.
 
-Then you might want to consider to `Index` this table first of all to ensure the read performance. Second of all is how can you optimize the data?
+Then you might want to consider to `Index` this table first to ensure the read performance. Second of all is how can you optimize the data?
 
 ## JSON data
 
-Before we move onto the MongoDB (NoSQL) database, I want to talk about the data format -- JSON.
+Before we move onto the MongoDB (NoSQL) database, I want to talk about the data format -- JSON (JavaScript Object Notation).
 
-JSON is very simple format of representing data. For example:
+JSON is simple format of representing data. In example:
 
 ```json
 {
@@ -319,15 +319,24 @@ In upcoming lessons, we will not be using tabular format anymore. Instead we wil
 
 JSON contain a few concepts:
 
-* `{}` indicates an object like `skills` or the entire object
-* `[]` indicates an list like `students`
-* can contain String like `name`
-* can contain numbers like `gpa`
+* `{}` indicates an **object** like *skills* or the entire object
+    * In object, you have *key* and *value* like `"key": "value"`
+    * Each value can be one of the following type:
+        * boolean like `true` or `false`
+        * strings like `"string"`
+        * numbers like `123`, or even `12.33`
+        * nested object `{"name": "value"}`
+        * array in object like below
+        * *null* – empty object
+* `[]` indicates a **list** like *students*
 * can nest as many levels you want and as many attributes as you want
 
-JSON has been the most popular format of passing data from the front-end to back-end! And because of this, NoSQL database arise!
+JSON has been the most popular format of passing data from the front-end to back-end!
+And because of this, NoSQL database like MongoDB arise!
 
-NoSQL database store the data in mostly JSON format (as we will see later in the MongoDB).
+More reference to JSON: https://www.digitalocean.com/community/tutorials/an-introduction-to-json
+
+NoSQL database store the data in mostly JSON format (as we will see in later lecture).
 
 MySQL recently also add the support to store JSON data (see https://dev.mysql.com/doc/refman/5.7/en/json.html)
 
