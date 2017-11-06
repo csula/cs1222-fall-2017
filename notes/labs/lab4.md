@@ -41,13 +41,15 @@ In addition, we also want to allow artist to create multiple personal pages. Cur
     * Use `DESCRIBE` to test result
 7. Copy ArtistID and WebAddress from Artists table to ArtistPages table
     * Use `SELECT` to test result
-8. Delete the column `WebAddress` from the Artists table
+8. Delete the column `WebAddress` from the ArtistPages table
     * Use `DESCRIBE` to test result
 9. Artist id 5 decide to be a developer and decide to remove himself/herself out of Artists table. Delete Artist id 5 from artists table
     * Hint: remember we still have the foreign keys set up from earlier table, if you have to do anything in the table, please list them as well
     * Use `SELECT * FROM ArtistPages` to test result
-10. Create a view called `ArtistNamePages` containing ArtistID, ArtistName, Country and WebAddress from `ArtistPages` table
+10. Create a view called `ArtistNamePages` containing ArtistID, ArtistName, Country and WebAddress from `Artists` table
     * USE `SELECT` to test result
+
+http://104.131.155.18:8000/lab-4_1
 
 ## Evening Section (16:30 - 20:30)
 
@@ -107,3 +109,6 @@ Once we created the trasaction table, we also want to create a webaddress for th
         TitleID | Sales    | SalesType | Identifier
         1       | 0.645212 | web       | www.Meet_the_Neurotics.lyrics.com
         ```
+
+
+http://104.131.155.18:8000/lab-4_2
