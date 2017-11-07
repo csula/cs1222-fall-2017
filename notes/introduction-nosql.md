@@ -48,33 +48,13 @@ https://www.mongodb.com/nosql-explained
 
 ## Install MongoDB
 
-Now for the students who have laptop with you, you can follow the instruction here
-to install MongoDB.
-
-https://docs.mongodb.com/getting-started/shell/installation/
-
-After you installed the MongoDB above, you should be able to verify from terminal
-like below:
-
-```sh
-$ mongod
-2016-11-09T22:47:40.000-0800 I CONTROL  [initandlisten] MongoDB starting : pid=91180 port=27017 dbpath=/data/db 64-bit host=Erics-MacBook-Pro-2.local
-2016-11-09T22:47:40.000-0800 I CONTROL  [initandlisten] db version v3.2.4
-2016-11-09T22:47:40.001-0800 I CONTROL  [initandlisten] git version: e2ee9ffcf9f5a94fad76802e28cc978718bb7a30
-2016-11-09T22:47:40.001-0800 I CONTROL  [initandlisten] allocator: system
-2016-11-09T22:47:40.001-0800 I CONTROL  [initandlisten] modules: none
-2016-11-09T22:47:40.001-0800 I CONTROL  [initandlisten] build environment:
-2016-11-09T22:47:40.001-0800 I CONTROL  [initandlisten]     distarch: x86_64
-2016-11-09T22:47:40.001-0800 I CONTROL  [initandlisten]     target_arch: x86_64
-2016-11-09T22:47:40.001-0800 I CONTROL  [initandlisten] options: {}
-2016-11-09T22:47:40.001-0800 I -        [initandlisten] Detected data files in /data/db created by the 'mmapv1' storage engine, so setting the active storage engine to 'mmapv1'.
-2016-11-09T22:47:40.012-0800 I JOURNAL  [initandlisten] journal dir=/data/db/journal
-2016-11-09T22:47:40.012-0800 I JOURNAL  [initandlisten] recover : no journal files present, no recovery needed
-```
+https://github.com/csula/Utilities/blob/master/setups/mongo.md
 
 ## Import sample data
 
 Download file from https://raw.githubusercontent.com/mongodb/docs-assets/primer-dataset/primer-dataset.json
+
+> If you are using school laboratory, type in `wget https://raw.githubusercontent.com/mongodb/docs-assets/primer-dataset/primer-dataset.json`
 
 And then run below command:
 
@@ -83,7 +63,7 @@ mongoimport --db test --collection restaurants --drop --file ~/downloads/primer-
 ```
 
 ```sh
-"C:\Program Files\MongoDB\Server\3.2\bin\mongoimport.exe" --db test --collection restaurants --drop --file C:\Users\IEUser\Downloads\primer-dataset.json
+"C:\Program Files\MongoDB\Server\3.4\bin\mongoimport.exe" --db test --collection restaurants --drop --file C:\Users\IEUser\Downloads\primer-dataset.json
 ```
 
 ## Mongo shell commands
