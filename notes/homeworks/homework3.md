@@ -19,7 +19,11 @@ Questions:
 3. Insert another user object containing `name` of "Bob", `age` of 21, `position` of "student" and `grade` of 89 to `users` collection
 4. Find users of age between 20 to 23 (inclusive)
     * hint: at the end of find(), please append `toArray()` for testing
-5. Update Eric to have a new field called homeAddress containing of following json:
+5. Delete user bob
+    * use `db.users.find().toArray()` to test result
+6. Update user object of 'Alice' to grade 95
+    * use `db.users.find().toArray()` to test result
+7. Update Eric to have a new field called homeAddress containing of following json:
 
     ```
     {
@@ -29,16 +33,12 @@ Questions:
     }
     ```
 
-    * hint: find user Eric again to test result
-6. Delete user bob
-    * hint: use `db.users.find().toArray()` to test result
-7. Update user object of 'Alice' to grade 95
-    * hint: use `db.users.find().toArray()` to test result
+    * Find user's homeAddress to test result
 
 > From question 8 to 10, you will be using primer-dataset.json example from the course note in "restaurants" collection
 
-8. Find restaurants that is in zipcode "11215" and has score of greater than 50
+8. Find restaurant ids that is in zipcode "11215" and has score of greater than 50
 9. Update above restaurants to have additional attribute called `"featured": true`
-    * hint: use the same search query as above to test result
+    * use the same search query as above to test result including the featured field
 10. Delete restaurants in zipcode "11205" with score of higher than 40
-    * hint: after delete such restaurant(s), find all the restaurants in zipcode "11205" to test result
+    * find all the restaurants in zipcode "11205" with restaurant id sorted in ascending to test result

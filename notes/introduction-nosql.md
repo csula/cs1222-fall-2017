@@ -165,6 +165,14 @@ db.restaurants.find(
 
 // sorting
 db.restaurants.find().sort( { "borough": 1, "address.zipcode": 1 } )
+
+// when you call find command you actually do not retrieve any object back
+// to retrieve objects back you will need to call `toArray()`
+db.restaurants.find().toArray()
+
+// projection
+// projection allows you to select certain attributes when retrieve JSON
+db.restaurants.find({}, {borough: 1});
 ```
 
 ### To update a document
