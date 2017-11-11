@@ -58,7 +58,7 @@ data over the entire time.
 To start with, you can see the simple visualization of current metro state here:
 http://138.68.57.231:8000/
 
-![](../imgs/extra-credit.png)
+![](../imgs/extra-credit-visualization.png)
 
 You can find the number of riders and how train moves visually.
 
