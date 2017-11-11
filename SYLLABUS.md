@@ -91,9 +91,9 @@ The schedule below is tentative and is subject to change.
 | 10 [10/28]         | [Data definition language][9] |  |
 | 11 [11/04]         | [Advance Topic in SQL][15] | [Lab 4][27] |
 | 12 [11/11]         | [Introduction to NoSQL][10] |  |
-| 13 [11/18]         | [MongoDB Aggregation][13] | [Homework 3][19], [Extra Credit][28] |
+| 13 [11/18]         | [MongoDB Aggregation][13] | [Homework 3][19] |
 | 14 [11/25]         | Thanks Giving holiday | No class |
-| 15 [12/02]         | [Database Summary][12] | [Homework 4][20] |
+| 15 [12/02]         | [Database Summary][12] | [Homework 4][20], [Extra Credit][28] |
 | Final [12/09]      | [Final][16] |  |
 
 [1]: notes/introduction.md
