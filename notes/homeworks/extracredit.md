@@ -85,7 +85,7 @@ following questions
 
 1. Which station is the most busiest station?
 2. Which line generates most profit?
-3. When is the work hour? (work hour as the hours riders shows up at station more)
+3. When is the rush hour? (work hour as the hours riders shows up at station more)
 4. Which line is the busiest line?
 5. Which station has the most riders that cant get on train?
 
