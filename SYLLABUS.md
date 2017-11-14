@@ -9,10 +9,10 @@
 
 - **Instructor** Hsiang-Yu (Eric) Liao [rcliao01@gmail.com](mailto:rcliao01@gmail.com)
 - **Lecture**
-  * Saturday 12:00PM to 1:40PM (section 7 - lecture) and 1:40PM to 4:10PM (section 8 - laboratory)
-  * Saturday 4:30PM to 6:10PM (section 9 - lecture) and 6:10PM to 8:40PM (section 10 - laboratory)
+  * Saturday 12:00 p.m. to 1:40 p.m. (section 7 - lecture) and 1:40 p.m. to 4:10 p.m. (section 8 - laboratory)
+  * Saturday 4:30 p.m. to 6:10 p.m. (section 9 - lecture) and 6:10 p.m. to 8:40 p.m. (section 10 - laboratory)
 - **Office Hours**
-  * On-site: Saturday 11:00 AM to 12:00 PM, 4:10PM to 4:30PM and 8:40PM to 9:40PM
+  * On-site: Saturday 11:00 a.m. to 12:00 p.m., 4:10 p.m. to 4:30 p.m. and 8:40 p.m. to 9:40 p.m.
   * Online 24/7
 - **Office Hours Location** Either at the classroom (E&T A309 or library -- see notes below)
 - **Location** E&T A309
