@@ -101,7 +101,7 @@ http://media.mongodb.org/zips.json to your download directory and import the JSO
 
 > Reminder: to import a JSON, please use `mongoimport` command as we learned last week
 
-Each document in the `zipcodes` collection has the following form:
+Each document in the `zips` collection has the following form:
 
 ```json
 {
@@ -119,7 +119,7 @@ Each document in the `zipcodes` collection has the following form:
 ##### Return states with Populations above 10 Million
 
 ```js
-db.zipcodes.aggregate( [
+db.zips.aggregate( [
 	{ $group: { _id: "$state", totalPop: { $sum: "$pop" } } },
 	{ $match: { totalPop: { $gte: 10 * 1000 * 1000 } } }
 ] )
@@ -158,7 +158,7 @@ The equivalent SQL would be:
 
 ```sql
 SELECT state, SUM(pop) AS totalPop
-FROM zipcodes
+FROM zips
 GROUP BY state
 HAVING totalPop >= (10 * 1000 * 1000); 
 ```
@@ -166,7 +166,7 @@ HAVING totalPop >= (10 * 1000 * 1000);
 #### Return average city population by state
 
 ```js
-db.zipcodes.aggregate( [
+db.zips.aggregate( [
 	{ $group: { _id: { state: "$state", city: "$city" }, pop: { $sum: "$pop" } } },
 	{ $group: { _id: "$_id.state", avgCityPop: { $avg: "$pop" } } }
 ] )
@@ -193,7 +193,7 @@ And then second $group stage groups the documents by `_id.state` field (e.g. `st
 #### Return largest and smallest cities by state
 
 ```js
-db.zipcodes.aggregate( [
+db.zips.aggregate( [
    { $group:
       {
         _id: { state: "$state", city: "$city" },
