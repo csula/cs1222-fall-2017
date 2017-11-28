@@ -7,7 +7,7 @@ Reminder:
 * In order to run any mongo shell command, you will need mongod to be started
 
 In this homework, you will need to download the sample data set from 
-[piching.csv under samples folder](https://raw.githubusercontent.com/csula/cs1222-fall-2016/master/samples/pitching.csv).
+[piching.csv under samples folder](https://raw.githubusercontent.com/csula/cs1222-fall-2017/master/samples/pitching.csv).
 
 After download is completed, you will then need to import the sample piching.csv into your mongo database. 
 To do so, you will need to run command like below:
