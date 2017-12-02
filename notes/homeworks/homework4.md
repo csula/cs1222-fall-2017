@@ -17,7 +17,7 @@ To do so, you will need to run command like below:
 mongoimport --db cs1222 --collection pitching --drop --type csv --headerline --file ~/Downloads/pitching.csv
 
 # Windows
-"C:\Program Files\MongoDB\Server\3.2\bin\mongoimport.exe" --db cs1222 --collection pitching --drop --type csv --headerline --file /Users/Eric/Downloads/pitching.csv
+"C:\Program Files\MongoDB\Server\3.4\bin\mongoimport.exe" --db cs1222 --collection pitching --drop --type csv --headerline --file C:/Users/Eric/Downloads/pitching.csv
 ```
 
 > Remember to change the download file path to your download path accordingly.
